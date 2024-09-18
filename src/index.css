@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body, button, span, a, input, select {
+  font-family: "DM Sans", sans-serif;
+}
+ h1, h2, h3, h4, h5, h6, h6, h2 span  {
+  font-family: DM Serif Display;
+}
+ol, ul {
+    margin-bottom: inherit;
+}
+h2 {
+  color: #1e1e1e;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+h3 {
+  color: #000;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39.6px;
+}
+h2 span {
+    color: #1c9d41;
+    padding-right: 6px;
+}
+body {
+  background: #fafff9;
+}
+img {
+  max-width: 100%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+.nav-menu-list {
+  color: #686868;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px;
+  padding: 30px 0px;
+  display: inline-block;
+}
+.nav-menu-list svg {
+  position: relative;
+  top: 1px;
+}
+.nav-menu-list.active {
+  color: #212121;
+}
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.mega-menu-content {
+  min-height: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgb(255 255 255);
+  z-index: 9;
+  display: inline-block;
+  border: solid 1px #e2e2e2;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 300ms ease-in-out;
+}
+.menu-wrap:hover .mega-menu-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+  transition: all 300ms ease-in-out;
+}
+.mega-menu-content .nav-menu-list {
+  padding: 6px 0px;
+}
+.mega-menu-content .nav-menu-list:hover {
+  text-decoration: underline;
+}
+.bg-wave {
+  background-image: url(./assets/top-bg.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+}
+
+@media screen and (max-width: 989px) {
+.nav-menu {
+  display: none;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 40px 18px;
+  background: #d9e0e9;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 2;
+  flex-direction: column;
+}
+}
