@@ -41,6 +41,9 @@ img {
   list-style: none;
   text-decoration: none;
 }
+input:focus-visible {
+  outline: none;
+}
 .container {
   max-width: 1230px;
   padding: 0 15px;

@@ -12,7 +12,7 @@ interface PopularTourCardProps {
         {badge ? (
         <div className="absolute top-[18px] right-[18px]">
           <p className="text-white text-[13px] font-semibold px-[11px] py-1.5 bg-[#1c9d41] rounded-[3px]">
-            {badge} tours
+            {badge}
           </p>
         </div>
       ) : null}
