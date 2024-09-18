@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const sampleCategories = [
   {
@@ -16,7 +16,7 @@ const sampleCategories = [
 ];
 
 const MegaMenu = () => {
-  const [categories, setCategories] = useState(sampleCategories);
+  const [categories] = useState(sampleCategories);
 
   return (
         <div className='mega-menu-content'>
