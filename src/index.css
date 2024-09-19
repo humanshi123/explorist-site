@@ -105,6 +105,19 @@ input:focus-visible {
   background-position: bottom center;
   background-size: 100%;
 }
+.list-items li a {
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.list-items li {
+  margin-bottom: 12px;
+  line-height: 20px;
+}
+
+
 
 @media screen and (max-width: 989px) {
 .nav-menu {
