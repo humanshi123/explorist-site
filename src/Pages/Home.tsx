@@ -6,6 +6,8 @@ import disc1 from "../assets/discover.png";
 import disc2 from "../assets/discover2.png";
 import disc3 from "../assets/discover3.png";
 import DiscoverCards from "../Components/DiscoverCards";
+import ReviewSlider from "../Components/ReviewSlider";
+import review from "../assets/review.svg";
 
 const destinations = [
   {
@@ -70,6 +72,37 @@ const discoverData =[
     description: "We understand that plans can change, and when they do, you shouldn't have to pay the price. Our No Hassle Cancellation Policy is designed with your dynamic lifestyle in mind.",
   },
 ]
+const dataSlider = [
+  {
+    id: 1,
+    title: `Everything was great,  Finn and Ryan,  and the "pancake" when sitting up front  and the sail moved to other side. Total fun. Will do this again.`,
+    tagline: "Athlete",
+    image: review,
+    name: "Leon Jean",
+  },
+  {
+    id: 2,
+    title: "Was fantastic experience! Have wanted to do this for so long and it did not disappoint. Got wet..lol..our guide was so fun and knowledgeable. ",
+    tagline: "Client",
+    image: review,
+    name: "Alesha Martin",
+  },
+  {
+    id: 3,
+    title: "Great trip, still waiting to see photos on the website so we can order!  Our guide Bayden was funny, and talented.",
+    tagline: "Client",
+    image: review,
+    name: "Alesha Martin",
+  },
+  {
+    id: 4,
+    title: "Great trip, still waiting to see photos on the website so we can order!  Our guide Bayden was funny, and talented.",
+    tagline: "Client",
+    image: review,
+    name: "Alesha Martin",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -158,6 +191,13 @@ export default function Home() {
         
         </div>
         </section>
+        <section className="review-section">
+          <div className="pt-[80px] pb-[50px] ">
+          <h2 className="text-center mb-[120px]">What Our <span>Customers Say</span></h2>
+          <ReviewSlider data={dataSlider}  />
+          </div>
+        </section>
+
     </main>
   );
 }
