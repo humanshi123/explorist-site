@@ -8,6 +8,7 @@ import disc3 from "../assets/discover3.png";
 import DiscoverCards from "../Components/DiscoverCards";
 import ReviewSlider from "../Components/ReviewSlider";
 import review from "../assets/review.svg";
+import SearchBar from "../Components/SearchBar";
 
 const destinations = [
   {
@@ -75,37 +76,94 @@ const discoverData =[
 const dataSlider = [
   {
     id: 1,
-    title: `Everything was great,  Finn and Ryan,  and the "pancake" when sitting up front  and the sail moved to other side. Total fun. Will do this again.`,
-    tagline: "Athlete",
+    title: `Was fantastic experience! Have wanted to do this for so long and it did not disappoint. Got wet..lol..our guide was so fun and knowledgeable. `,
+    tagline: "VIATOR",
     image: review,
-    name: "Leon Jean",
+    name: "Kelsey_K",
   },
   {
     id: 2,
-    title: "Was fantastic experience! Have wanted to do this for so long and it did not disappoint. Got wet..lol..our guide was so fun and knowledgeable. ",
-    tagline: "Client",
+    title: "Great trip, still waiting to see photos on the website so we can order!  Our guide Bayden was funny, and talented. ",
+    tagline: "VIATOR",
     image: review,
-    name: "Alesha Martin",
+    name: "bnbyoung",
   },
   {
     id: 3,
-    title: "Great trip, still waiting to see photos on the website so we can order!  Our guide Bayden was funny, and talented.",
-    tagline: "Client",
+    title: "The mountain stories from Fredd was cherry on the cake. We had a amazing experience and fun. Thank you so much...!",
+    tagline: "VIATOR",
     image: review,
     name: "Alesha Martin",
   },
   {
     id: 4,
-    title: "Great trip, still waiting to see photos on the website so we can order!  Our guide Bayden was funny, and talented.",
-    tagline: "Client",
+    title: "Tracy and her cozy cabin just oozed a genuine warmth!  To start, her tour bus was the most comfortable one I had been in Yellowknife.  Her chowder and bannock were delicious and she entertained us throughout the night with stories.  She took her time and equally spoke with every individual guest all the while cooking and cleaning all at the same time.  She was so organized, set everyone’s expectations on how picture taking was going to be once the aurora came out.  She also provided ingredients for s’mores that you could make in the fire pit outside.  There were a plethora of fur coats that you could try on and wear.  She also briefly educated us on the indigenous people and the Yellowknife history.  Honestly, even if I didn’t see the Aurora, it would have been a great time.  The aurora was just the cherry on top to a wonderful night.  I did this tour on the last night of my stay in Yellowknife.  I was saving the best for last!  Our tour was suppose to end at 2pm but the Aurora came out later in the night so she let us stay to watch for longer and we didn’t get back to the hotel until 3am.  I highly recommend that you take Tracy’s tour.  On the coldest of nights,  a mom and her son from Hawaii could feel the “aloha” in Yellowknife.  ",
+    tagline: "VIATOR",
     image: review,
-    name: "Alesha Martin",
+    name: "JoyLynn_T",
   },
+  {
+    id: 5,
+    title: "Tracy is a wonderful hostess and her fish chowder and bannock are delicious.  A very worthwhile trip.",
+    tagline: "VIATOR",
+    image: review,
+    name: "Dianne_V",
+  },
+  {
+    id: 6,
+    title: "Tonight (well last night now I suppose) we took the Cozy Cabin Tour with Tracy. When I tell you hospitality is real in Yellowknife I mean it wholeheartedly. We were picked up by Derek, our driver for the evening. And we picked up the other tour guests and made our way to the cozy cabin. Tracy prepared a midnight meal of fresh bannock (bread) and fish chowder. We dressed up in furs and Inuit coats She told us all about her life and life in Yellowknife. We especially enjoyed hearing about the common animals and the indigenous heritage of the region. We enjoyed hot chocolate around 1 am.. Then Ms. Aurora showed up and left us speechless. There truly are no words..",
+    tagline: "VIATOR",
+    image: review,
+    name: "Shanea_W",
+  },
+  {
+    id: 7,
+    title: "Everything about this tour was wonderful. Andy did a great job with his narrative on both history and food. His selection of five or six food items / restaurants was perfect. The pace was good, and we highly recommend this to anyone.",
+    tagline: "VIATOR",
+    image: review,
+    name: "David_C",
+  },
+  {
+    id: 8,
+    title: "Andy was very knowledgeable and provided great history on the city. We had great food and got to meet the restaurant owners and learn how they got started. This was very worth the time and money and will not disappoint. ",
+    tagline: "VIATOR",
+    image: review,
+    name: "Wendy_Z",
+  },
+  {
+    id: 9,
+    title: "We had a wonderful time on our food tour with Andy. It was a great mix of history of Victoria and delicious bites. The tour kept a good pace, never feeling too rushed or like we were paused too long. We would highly recommend this tour!",
+    tagline: "VIATOR",
+    image: review,
+    name: "Elizabeth_K",
+  },
+  {
+    id: 10,
+    title: "I really enjoyed having a chance to learn more about sailing and help the crew move the sails around! It was a lot of fun! Great crew!",
+    tagline: "VIATOR",
+    image: review,
+    name: "James_T",
+  },
+  {
+    id: 11,
+    title: "Everything was great, insight of the story behind sailing, with the captain being very knowledgeable of their craft. ",
+    tagline: "VIATOR",
+    image: review,
+    name: "Jayson_E",
+  },
+  {
+    id: 12,
+    title: "Very fun trip!  Very knowledgeable and friendly crew.  Definitely recommend!!   Beautiful harbor scenery,",
+    tagline: "VIATOR",
+    image: review,
+    name: "Jill_K",
+  },
+
 ];
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[#FAFFF9]">
       <section className="bg-wave pb-10 ">
         <div className="container">
           <div className="flex gap-[30px] mt-[50px]">
@@ -120,7 +178,10 @@ export default function Home() {
               <p className="max-w-[474px] text-[#8c8c8c] text-base font-normal leading-[30px]">
                 Discover your next adventure! Find local events and explore
                 Canada with us.
-              </p>
+              </p> 
+            <div className="mt-[45px] w-[calc(100%+257px)] relative z-[1]  ">
+            <SearchBar />
+            </div>
             </div>
             <div className="w-[46%] ">
               <img src={banner} alt="" className="w-full rounded-[12px] " />

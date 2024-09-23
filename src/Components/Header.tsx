@@ -6,6 +6,7 @@ import MegaMenu from "./MegaMenu";
 
 const Header = () => {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
+  const [showData, setShowData]= useState(false);
 
   const handleToggleOpen = () => {
     setIsToggleOpen(!isToggleOpen);
@@ -71,9 +72,15 @@ const Header = () => {
               <option value="CAD">CAD</option>
               <option value="USD">USD</option>
             </select>
-            <NavLink to="/login" className="text-black text-xs">
-            <AccountIcon />
-            </NavLink>
+            <div className="relative cursor-pointer  " onClick={()=> setShowData(!showData)}>  <AccountIcon /> 
+            {showData && (
+             <div className="triangle absolute z-[2] top-[48px] right-0 w-[200px] rounded-b-[10px] shadow-[0_10px_20px_rgba(0,0,0,0.2)]">
+           <NavLink to="/sign-in" className="text-black  border-t border-[#e5e5e5] !rounded-b-[10px]  bg-white hover:bg-[#eee] text-sm w-full h-full inline-block py-[10px] pl-[30px]">
+           Sign in/Sign up
+           </NavLink>
+           </div>
+          )}
+          </div>
             <p className="menuToggleBtn lg:hidden" onClick={handleToggleOpen}>
            
             <ToggleIcon />
