@@ -7,6 +7,8 @@ import Home from "../Pages/Home";
 import FindBooking from "../Pages/FindBooking";
 import ForgotPassword from "../Pages/ForgotPassword";
 import ChangePassword from "../Pages/ChangePassword";
+import MainCategory from "../Pages/MainCategory";
+import Product from "../Pages/Product";
 
 export default function AllRoutes() {
   return (
@@ -30,7 +32,8 @@ export default function AllRoutes() {
               element={ <FindBooking />
               }
             />
-           
+            <Route path="/category/:categoryId" element={<MainCategory /> } />
+           <Route path="/product/:productId" element={<Product/> } />
          
           </Route>
         </Routes>

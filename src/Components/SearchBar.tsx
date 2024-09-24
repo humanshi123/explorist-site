@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 interface PlaceType {
   label: string;
-  value: {
+  value: { 
     place_id: string;
     description: string;
   };
@@ -23,11 +23,11 @@ const SearchBar: React.FC = () => {
   };
 
   return (
-    <div className="search-bar bg-white shadow-md rounded-[20px] flex justify-between items-center">
+    <div className="search-bar bg-white shadow-md rounded-[20px] md:flex justify-between items-center">
       {/* Place Search Input */}
- <div className='grid grid-cols-3 bg-white rounded-s-[20px] w-full gap-x-[30px] py-6 px-[59px] '>
+ <div className='grid md:grid-cols-3 gap-y-5 text-left bg-white md:rounded-s-[20px] w-full gap-x-[15px] lg:gap-x-[30px] p-5 md:py-6 md:px-[30px] lg:px-[59px] '>
  <div className="">
-        <label className="block text-[#8c8c8c] mb-3">Place</label>
+        <label className="hidden md:block text-[#8c8c8c] mb-3">Place</label>
         <GooglePlacesAutocomplete
           apiKey="YOUR_GOOGLE_API_KEY"
           
@@ -43,7 +43,7 @@ const SearchBar: React.FC = () => {
 
       {/* Start Date Picker */}
       <div className="">
-        <label className="block text-[#8c8c8c] mb-3">Start Date</label>
+        <label className="hidden md:block text-[#8c8c8c] mb-3">Start Date</label>
         <DatePicker
           selected={startDate}
           onChange={(date: Date | null) => {
@@ -107,7 +107,7 @@ const SearchBar: React.FC = () => {
 
       {/* End Date Picker */}
       <div className="">
-        <label className="block text-[#8c8c8c] mb-3 ">End Date</label>
+        <label className="hidden md:block text-[#8c8c8c] mb-3 ">End Date</label>
         <DatePicker
           selected={endDate}
           onChange={(date: Date | null) => setEndDate(date)}
@@ -167,10 +167,10 @@ const SearchBar: React.FC = () => {
       </div>
  </div>
 
-  <div className='min-w-[152px]  flex h-[124px] '>
+  <div className='md:min-w-[152px] px-5 pb-5 md:p-0 flex md:h-[124px] '>
   <button
         onClick={handleSearch}
-        className="text-[20px] w-full h-full rounded-e-[20px] inline-block bg-[#1c9d41] text-white  transition"
+        className="search-button text-[20px] w-full h-full md:rounded-e-[20px] inline-block bg-[#1c9d41] text-white  transition"
       >
         Search
       </button>

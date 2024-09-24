@@ -44,7 +44,7 @@ const ReviewSlider: React.FC<DemoSliderProps> = ({ data }) => {
         modules={[Autoplay, Navigation, Pagination]}
         breakpoints={{
           768: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.2,
           },
           1100: {
             slidesPerView: 2.4,
@@ -55,7 +55,7 @@ const ReviewSlider: React.FC<DemoSliderProps> = ({ data }) => {
         {data.map(({ id, image, tagline, name, title }) => {
           const isExpanded = expandedStates[id] || false; // Check if the slide is expanded, default is false
           return (
-            <SwiperSlide key={id} className="bg-white p-[30px] rounded-[10px] flex h-auto mb-[40px]">
+            <SwiperSlide key={id} className="bg-white p-[15px] md:p-[30px] rounded-[10px] flex h-auto mb-[40px]">
               <div>
                 <p className="text-[#757575] text-sm md:leading-[30px]">
                   {isExpanded ? title : `${title.slice(0, 300)}`}
