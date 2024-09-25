@@ -150,7 +150,10 @@ export default function Home() {
               </p>
               <h1 className="mt-3 md:mt-[22px] mb-5 mx-auto lg:mx-0 max-w-[493px] text-[#1e1e1e] text-[36px] md:text-[48px] lg:text-[68px] leading-[48px] md:leading-[60px] lg:leading-[90.80px]">
                 Experiences Last a
-                <span className="text-[#1c9d41] font-Dmserif leading-normal"> Lifetime</span>
+                <span className="text-[#1c9d41] font-Dmserif leading-normal">
+                  {" "}
+                  Lifetime
+                </span>
               </h1>
               <p className="lg:max-w-[474px] text-[#8c8c8c] text-sm md:text-base font-normal leading-[26px] md:leading-[30px]">
                 Discover your next adventure! Find local events and explore
@@ -161,7 +164,11 @@ export default function Home() {
               </div>
             </div>
             <div className="lg:w-[46%] ">
-              <img src={banner} alt="" className="w-full rounded-[12px] lgmax-w-full max-w-[534px] mx-auto" />
+              <img
+                src={banner}
+                alt=""
+                className="w-full rounded-[12px] lgmax-w-full max-w-[534px] mx-auto"
+              />
             </div>
           </div>
         </div>
@@ -207,41 +214,58 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-[30px] md:py-[80px] ">
-        <div className="container">
-          <NewsLetter />
-        </div>
-      </section>
 
-      <section className="pb-[30px] md:pb-[80px]">
-        <div className="container">
-          <h2 className="text-center">
-            Discover the <span>Explorist Difference</span>{" "}
-          </h2>
-          <p className="text-center mt-[10px] text-[#8c8c8c] text-base font-normal">
-            Discover the Explorist Difference: Your Gateway to Unforgettable
-            Experiences
-          </p>
-          <div className="pt-[44px] grid md:grid-cols-3 gap-[15px] md:gap-[21px] ">
-            {discoverData.map((data) => (
-              <DiscoverCards
-                key={data.id}
-                imgSrc={data.imgSrc}
-                heading={data.heading}
-                description={data.description}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="review-section">
-        <div className="py-[30px] md:pt-[80px] md:pb-[50px] ">
-          <h2 className="text-center mb-[15px] md:mb-[120px]">
-            What Our <span>Customers Say</span>
-          </h2>
-          <ReviewSlider data={dataSlider} />
-        </div>
-      </section>
+      <NewsLetterSection />
+      <DiscoverSection />
+      <SliderSection />
     </main>
   );
 }
+
+export const NewsLetterSection = () => {
+  return (
+    <section className="newsletter py-[30px] md:py-[80px] ">
+      <div className="container">
+        <NewsLetter />
+      </div>
+    </section>
+  );
+};
+export const DiscoverSection = () => {
+  return (
+    <section className="discover-card pb-[30px] md:pb-[80px]">
+      <div className="container">
+        <h2 className="text-center">
+          Discover the <span>Explorist Difference</span>{" "}
+        </h2>
+        <p className="text-center mt-[10px] text-[#8c8c8c] text-base font-normal">
+          Discover the Explorist Difference: Your Gateway to Unforgettable
+          Experiences
+        </p>
+        <div className="pt-[44px] grid md:grid-cols-3 gap-[15px] md:gap-[21px] ">
+          {discoverData.map((data) => (
+            <DiscoverCards
+              key={data.id}
+              imgSrc={data.imgSrc}
+              heading={data.heading}
+              description={data.description}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+export const SliderSection = () => {
+  return (
+    <section className="review-section">
+      <div className="py-[30px] md:pt-[80px] md:pb-[50px] ">
+        <h2 className="text-center mb-[15px] md:mb-[120px]">
+          What Our <span>Customers Say</span>
+        </h2>
+        <ReviewSlider data={dataSlider} />
+      </div>
+    </section>
+  );
+};
+ 

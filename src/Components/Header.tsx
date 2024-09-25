@@ -6,6 +6,7 @@ import MegaMenu from "./MegaMenu";
 
 const Header = () => {
   const [isToggleOpen, setIsToggleOpen] = useState(false);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [showData, setShowData] = useState(false);
 
   // Handle body overflow when the sidebar is open
@@ -29,23 +30,22 @@ const Header = () => {
     setIsToggleOpen(false); // Close the sidebar on menu item click
   };
 
+  const handleMegaMenuToggle = () => {
+    setShowMegaMenu(!showMegaMenu);
+  };
+
   return (
     <header>
-      <div className="lg:container relative p-[15px] lg:p-0">
-        <div className="nav-container flex items-center justify-between ">
+      <div className="container relative  ">
+        <div className="nav-container py-[15px] lg:py-0 flex items-center justify-between">
           <div className="nav_logo">
             <NavLink to="/" className="nav-logo-link">
-              <img src={logo} alt="" className="max-w-[174px]" />
+              <img src={logo} alt="Logo" className="max-w-[174px]" />
             </NavLink>
           </div>
           <div>
-            <ul
-              className={`nav-menu ${isToggleOpen ? "open !block" : ""}`}
-            >
-              <button
-                className="close-btn hidden"
-                onClick={handleToggleClose}
-              >
+            <ul className={`nav-menu ${isToggleOpen ? "open !block" : ""}`}>
+              <button className="close-btn hidden" onClick={handleToggleClose}>
                 <ToggleClose />
               </button>
               <li onClick={handleMenuItemClick}>
@@ -53,15 +53,26 @@ const Header = () => {
                   Home
                 </NavLink>
               </li>
-              <li className="menu-wrap" onClick={handleMenuItemClick}>
-                <a href="#" className="nav-menu-list !flex items-center gap-[8px]">
+              <li
+                className="menu-wrap lg:hover:block"
+                onMouseEnter={() => window.innerWidth >= 1024 && setShowMegaMenu(true)}
+                onMouseLeave={() => window.innerWidth >= 1024 && setShowMegaMenu(false)}
+              >
+                <a
+                  href="#"
+                  className="nav-menu-list !flex items-center gap-[8px] justify-between lg:justify-start"
+                  onClick={handleMegaMenuToggle}
+                >
                   Top Attractions
                   <DropIcon />
                 </a>
-                <MegaMenu />
+                {showMegaMenu && (
+                  
+                    <MegaMenu />
+                )}
               </li>
               <li className="menu-wrap" onClick={handleMenuItemClick}>
-                <a href="#" className="nav-menu-list !flex items-center gap-[8px] ">
+                <a href="#" className="nav-menu-list !flex items-center gap-[8px] justify-between lg:justify-start">
                   Explore Canada
                   <DropIcon />
                 </a>
@@ -72,14 +83,14 @@ const Header = () => {
                 </NavLink>
               </li>
               <li onClick={handleMenuItemClick}>
-                <NavLink to="/find-booking" className="nav-menu-list ">
+                <NavLink to="/find-booking" className="nav-menu-list">
                   Find Your Booking
                 </NavLink>
               </li>
             </ul>
           </div>
-          <div className="flex items-center gap-[15px] lg:gap-[50px] justify-end ">
-            <select id="currency_select" className="currency_select border-none text-[#212121] text-base font-[500] leading-[27.2px] ">
+          <div className="flex items-center gap-[15px] lg:gap-[50px] justify-end">
+            <select id="currency_select" className="currency_select border-none text-[#212121] text-base font-[500] leading-[27.2px]">
               <option value="CAD">CAD</option>
               <option value="USD">USD</option>
             </select>

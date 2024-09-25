@@ -33,3 +33,4 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ imgSrc, heading, tour
 };
 
 export default DestinationCard;
+ 

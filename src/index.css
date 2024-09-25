@@ -85,27 +85,7 @@ input:focus-visible {
   align-items: center;
   justify-content: center;
 }
-.mega-menu-content {
-  min-height: 200px;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: rgb(255 255 255);
-  z-index: 9;
-  display: inline-block;
-  border: solid 1px #e2e2e2;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 300ms ease-in-out;
-}
-.menu-wrap:hover .mega-menu-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0px);
-  transition: all 300ms ease-in-out;
-}
+
 .mega-menu-content .nav-menu-list {
   padding: 6px 0px;
 }
@@ -238,8 +218,8 @@ input.calender-input {
   opacity: 0.35;
 }
 .react-datepicker__day--selected {
-  background: #1c9d41;
-  color: #fff;
+  background: #1c9d41 !important;
+  color: #fff !important;
 }
 .react-datepicker__day,
 .react-datepicker__time-name {
@@ -260,7 +240,60 @@ input.calender-input {
   justify-content: space-around;
   padding: 0 10px;
 }
+.product-desc {
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  margin: 0 auto;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #8c8c8c;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+p {
+  color: #8c8c8c;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.shadow-text {
+  text-shadow: 0px 0px 10px #000;
+}
+.find-booking .newsletter {
+  padding-top: 0;
+}
 
+@media screen and (min-width: 1025px) {
+  .mega-menu-content {
+    min-height: 200px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgb(255 255 255);
+    z-index: 9;
+    display: inline-block;
+    border: solid 1px #e2e2e2;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 300ms ease-in-out;
+  }
+  .menu-wrap:hover .mega-menu-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition: all 300ms ease-in-out;
+  }
+
+}
 @media screen and (max-width: 1024px) {
   .nav-menu {
     display: none;
@@ -279,11 +312,12 @@ input.calender-input {
   h2 {
     font-size: 34px;
   }
-  .mega-menu-content {
-    display: none;
+  .mega-menu-content .nav-menu-list {
+    line-height: 22px;
 }
-
-
+.mega-menu-content {
+  margin-bottom: 30px;
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -330,7 +364,7 @@ input.calender-input {
   p.dropdown {
     padding: 5px 0 10px;
     border-bottom: 1px solid #8c9f92;
-    font-weight: 500;
+    font-weight: 400;
     position: relative;
   }
   p.dropdown::after {
