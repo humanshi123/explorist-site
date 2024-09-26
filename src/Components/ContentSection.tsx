@@ -23,5 +23,5 @@ const ContentSection: React.FC<ContentSectionProps> = ({ title, description, ima
     </div>
   );
 };
-
+ 
 export default ContentSection;

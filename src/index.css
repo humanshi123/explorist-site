@@ -15,7 +15,10 @@ h3,
 h4,
 h5,
 h6,
-h6,
+h6 {
+  font-family: DM Serif Display;
+  color: #1e1e1e;
+}
 h2 span {
   font-family: DM Serif Display;
 }
@@ -31,7 +34,7 @@ h2 {
   line-height: normal;
 }
 h3 {
-  color: #000;
+  color: #1e1e1e;
   font-size: 33px;
   font-style: normal;
   font-weight: 400;
@@ -269,6 +272,50 @@ p {
 .find-booking .newsletter {
   padding-top: 0;
 }
+.drop-icon:after {
+  content: "";
+  background: url(./assets/plus.svg) no-repeat;
+  background-position: 95%;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.main-drop.active .drop-icon:after {
+  background: url(./assets/minus.svg) no-repeat;
+  height: 2px;
+  top: 15px;
+}
+.contact-form label {
+  color: #686868;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2px;
+}
+textarea:focus-visible {
+  outline: none;
+}
+.contact-form input, .contact-form textarea {
+  border-radius: 10px;
+  border: 1px solid #E9E9E9;
+  background: #F2F7F1;
+  width: 100%;
+  display: inline-block;
+  color: #686868;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27.2px;
+  padding: 9px 30px;
+  height: auto;
+  box-shadow: none;
+}
+
 
 @media screen and (min-width: 1025px) {
   .mega-menu-content {
@@ -294,7 +341,7 @@ p {
   }
 
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .nav-menu {
     display: none;
     position: absolute;

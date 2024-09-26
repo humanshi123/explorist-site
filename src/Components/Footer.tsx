@@ -109,16 +109,16 @@ const Footer = () => {
             {renderDropdownContent(3, (
               <ul className="list-items">
                 <li>
-                  <Link to="/">About</Link>
+                  <Link to="/about">About</Link>
                 </li>
                 <li>
-                  <Link to="/">Blogs</Link>
+                  <Link to="/blogs">Blogs</Link>
                 </li>
                 <li>
-                  <Link to="/">Contact us</Link>
+                  <Link to="/contact-us">Contact us</Link>
                 </li>
                 <li>
-                  <Link to="/">Founder’s message</Link>
+                  <Link to="/founder-message">Founder’s message</Link>
                 </li>
               </ul>
             ))}

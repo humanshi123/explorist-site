@@ -5,7 +5,7 @@ interface PopularTourCardProps {
   heading: string;
   categoryId: number; // Ensure this is passed correctly from props
 }
-
+ 
 const PopularTourCard: React.FC<PopularTourCardProps> = ({ image, heading, categoryId }) => {
   const navigate = useNavigate();
 
