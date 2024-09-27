@@ -502,4 +502,12 @@ textarea:focus-visible {
   .nav-menu-list {
     padding: 5px 0px;
   }
+  .content-pages-heading h1 {
+    font-size: 28px;
+}
+.content-pages-text p, .content-pages-text li, .content-pages p {
+  font-size: 14px;
+}
+
+
 }
