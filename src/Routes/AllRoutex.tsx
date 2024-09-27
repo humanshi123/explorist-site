@@ -14,6 +14,14 @@ import BlogPage from "../Pages/BlogPage";
 import Blogs from "../Pages/Blogs";
 import ContactUs from "../Pages/ContactUs";
 import FoundersMessage from "../Pages/FoundersMessage";
+import TermConditions from "../Pages/TermConditions";
+import PrivacyPolicy from "../Pages/PrivacyPolicy";
+import RefundPolicy from "../Pages/RefundPolicy";
+import MarketplaceServices from "../Pages/MarketplaceServices";
+import JoinMarketplace from "../Pages/JoinMarketplace";
+import SupplierPolicy from "../Pages/SupplierPolicy";
+import SupplierAcceptablePolicy from "../Pages/SupplierAcceptablePolicy";
+import Cart from "../Pages/Cart";
 
 export default function AllRoutes() {
   return (
@@ -27,13 +35,21 @@ export default function AllRoutes() {
           <Route path="/" element={ <Home /> }/>
           <Route path="/ecology-check" element={ <EcologyCheck />  } />
           <Route path="/find-booking" element={ <FindBooking /> } />
-           <Route path="/category/:categoryId" element={<MainCategory /> } />
-           <Route path="/product/:productId" element={<Product/> } />
-           <Route path="/view-blogs/:blogId" element={<BlogPage/> } />
-           <Route path="/about" element={<About /> } />
-           <Route path="/blogs" element={<Blogs /> } />
-           <Route path="/contact-us" element={<ContactUs /> } />
-           <Route path="/founder-message" element= {<FoundersMessage /> } />
+          <Route path="/category/:categoryId" element={<MainCategory /> } />
+          <Route path="/product/:productId" element={<Product/> } />
+          <Route path="/view-blogs/:blogId" element={<BlogPage/> } />
+          <Route path="/about" element={<About /> } />
+          <Route path="/blogs" element={<Blogs /> } />
+          <Route path="/contact-us" element={<ContactUs /> } />
+          <Route path="/founder-message" element= {<FoundersMessage /> } />
+          <Route path="/term-conditions" element={<TermConditions /> } />
+          <Route path="/privacy-policy" element={<PrivacyPolicy /> } />
+          <Route path="/refund-policy" element={<RefundPolicy /> } />
+          <Route path="/marketplace-services" element={<MarketplaceServices /> } />
+          <Route path="/join-marketplace" element={<JoinMarketplace /> } />
+          <Route path="/supplier-policy" element={<SupplierPolicy /> } />
+          <Route path="/supplier-acceptable-policy" element={<SupplierAcceptablePolicy /> } />
+          <Route path="/cart" element= {<Cart /> } />
 
           </Route>
         </Routes>

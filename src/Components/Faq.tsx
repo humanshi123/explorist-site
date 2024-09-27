@@ -54,7 +54,7 @@ const Faq: React.FC = () => {
     <section className='pb-10 pt-10 md:pt-[80px] '>
       <div className="container">
       <h2 className='mb-5 '>Frequently Asked Questions</h2>
-        <div className="grid md:grid-cols-2 md:gap-[21px] ">
+        <div className="grid md:grid-cols-2 md:gap-[21px] "> 
           <div>
             {faqData.map((dropdown, index) => (
               <div

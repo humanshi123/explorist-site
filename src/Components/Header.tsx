@@ -3,10 +3,11 @@ import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { AccountIcon, DropIcon, ToggleClose, ToggleIcon } from "../Utils/SvgIcons";
 import MegaMenu from "./MegaMenu";
+import { MegaMenuData } from "../Utils/MegaMenuData"; // Assuming your data is imported from here
 
 const Header = () => {
-  const [isToggleOpen, setIsToggleOpen] = useState(false);
-  const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [isToggleOpen, setIsToggleOpen] = useState(false);  
+  const [showMegaMenu, setShowMegaMenu] = useState<string | null>(null);
   const [showData, setShowData] = useState(false);
 
   // Handle body overflow when the sidebar is open
@@ -27,16 +28,16 @@ const Header = () => {
   };
 
   const handleMenuItemClick = () => {
-    setIsToggleOpen(false); // Close the sidebar on menu item click
+    setIsToggleOpen(false);
   };
 
-  const handleMegaMenuToggle = () => {
-    setShowMegaMenu(!showMegaMenu);
+  const handleMegaMenuToggle = (menuKey: string) => {
+    setShowMegaMenu(menuKey === showMegaMenu ? null : menuKey);
   };
 
   return (
     <header>
-      <div className="container relative  ">
+      <div className="container relative">
         <div className="nav-container py-[15px] lg:py-0 flex items-center justify-between">
           <div className="nav_logo">
             <NavLink to="/" className="nav-logo-link">
@@ -53,30 +54,39 @@ const Header = () => {
                   Home
                 </NavLink>
               </li>
+
+              {/* First MegaMenu for Top Attractions */}
               <li
                 className="menu-wrap lg:hover:block"
-                onMouseEnter={() => window.innerWidth >= 1024 && setShowMegaMenu(true)}
-                onMouseLeave={() => window.innerWidth >= 1024 && setShowMegaMenu(false)}
+                onMouseEnter={() => window.innerWidth >= 1024 && setShowMegaMenu('topAttractions')}
+                onMouseLeave={() => window.innerWidth >= 1024 && setShowMegaMenu(null)}
               >
                 <a
                   href="#"
                   className="nav-menu-list !flex items-center gap-[8px] justify-between lg:justify-start"
-                  onClick={handleMegaMenuToggle}
+                  onClick={() => handleMegaMenuToggle('topAttractions')}
                 >
                   Top Attractions
                   <DropIcon />
                 </a>
-                {showMegaMenu && (
-                  
-                    <MegaMenu />
-                )}
+                {showMegaMenu === 'topAttractions' && <MegaMenu categories={MegaMenuData.topAttractions} />}
               </li>
-              <li className="menu-wrap" onClick={handleMenuItemClick}>
-                <a href="#" className="nav-menu-list !flex items-center gap-[8px] justify-between lg:justify-start">
+              <li
+                className="menu-wrap lg:hover:block"
+                onMouseEnter={() => window.innerWidth >= 1024 && setShowMegaMenu('exploreCanada')}
+                onMouseLeave={() => window.innerWidth >= 1024 && setShowMegaMenu(null)}
+              >
+                <a
+                  href="#"
+                  className="nav-menu-list !flex items-center gap-[8px] justify-between lg:justify-start"
+                  onClick={() => handleMegaMenuToggle('exploreCanada')}
+                >
                   Explore Canada
                   <DropIcon />
                 </a>
+                {showMegaMenu === 'exploreCanada' && <MegaMenu categories={MegaMenuData.exploreCanada} />}
               </li>
+
               <li onClick={handleMenuItemClick}>
                 <NavLink to="/ecology-check" className="nav-menu-list">
                   Ecology Check

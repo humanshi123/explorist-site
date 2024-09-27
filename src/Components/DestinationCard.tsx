@@ -12,7 +12,7 @@ const DestinationCard: React.FC<DestinationCardProps> = ({ imgSrc, heading, tour
 
     // Navigate to the collection page based on the categoryId
     const handleCategoryClick = () => {
-        navigate(`/category/${categoryId}`);
+        navigate(`/category/${categoryId}`); 
     };
 
     return (

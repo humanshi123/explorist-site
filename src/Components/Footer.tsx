@@ -59,13 +59,13 @@ const Footer = () => {
             {renderDropdownContent(1, (
               <ul className="list-items">
                 <li>
-                  <Link to="/">Join our marketplace</Link>
+                  <Link to="/join-marketplace">Join our marketplace</Link>
                 </li>
                 <li>
-                  <Link to="/">Supplier privacy Policy</Link>
+                  <Link to="/supplier-policy">Supplier privacy Policy</Link>
                 </li>
                 <li>
-                  <Link to="/">Supplier acceptable policy</Link>
+                  <Link to="/supplier-acceptable-policy">Supplier acceptable policy</Link>
                 </li>
               </ul>
             ))}
@@ -81,19 +81,19 @@ const Footer = () => {
             {renderDropdownContent(2, (
               <ul className="list-items">
                 <li>
-                  <Link to="/">Term & Conditions for site access</Link>
+                  <Link to="/term-conditions">Term & Conditions for site access</Link>
                 </li>
                 <li>
-                  <Link to="/">Privacy policy</Link>
+                  <Link to="/privacy-policy">Privacy policy</Link>
                 </li>
                 <li>
-                  <Link to="/">Cancellation And Refund Policy</Link>
+                  <Link to="/refund-policy">Cancellation And Refund Policy</Link>
                 </li>
                 <li>
-                  <Link to="/">Explorist marketplace services</Link>
+                  <Link to="/marketplace-services">Explorist marketplace services</Link>
                 </li>
                 <li>
-                  <Link to="/">Find my booking</Link>
+                  <Link to="/find-booking">Find my booking</Link>
                 </li>
               </ul>
             ))}

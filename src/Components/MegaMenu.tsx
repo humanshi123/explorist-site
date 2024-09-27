@@ -1,48 +1,50 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
-const sampleCategories = [
-  {
-    title: 'Top Attractions',
-    items: ['Niagara Falls, Ontario', 'Moraine Lake', 'Cave of the Winds', 'Journey Behind the Falls', 'Capilano Suspension Bridge Park'],
-  },
-  {
-    title: 'Explore Canada',
-    items: ['Butchart Gardens', 'Skylon Tower', 'Downtown Vancouver', 'Stanley Park', 'CN Tower'],
-  },
-  {
-    title: '',
-    items: ['Bridal Veil Falls', 'Floral Clock', 'Table Rock Welcome Centre', 'Banff Gondola', 'Banff Lake Louise'],
-  },
-];
+import { MegaIcon } from "../Utils/SvgIcons";
+interface Category {
+  title: string;
+  items?: string[];
+}
 
-const MegaMenu = () => {
-  const [categories] = useState(sampleCategories);
+interface MegaMenuProps {
+  categories: Category[];
+}
 
+
+const MegaMenu = ({ categories }: MegaMenuProps) => {
   return (
-        <div className='mega-menu-content'>
-           <div className='block lg:flex justify-between'>
-           <div className='lg:min-w-[300px] '>
-            <p className='bg-[#f5f5f5] rounded-[4px] lg:rounded-none p-[10px] text-sm text-[#686868] lg:leading-[27.2px] flex justify-between items-center '>Top Attractions
-            <span><svg xmlns="http://www.w3.org/2000/svg" width="4" height="7" viewBox="0 0 4 7" fill="none">
-            <path d="M0.375732 6.12646L3.12671 3.37549L0.375732 0.624511L0.375732 6.12646Z" fill="#686868"></path>
-        </svg></span>
-            </p>
-            </div>
-            <div className="lg:flex w-full">
-            {categories.map((category, index) => (
-              <div key={index} className="category-column px-[15px] lg:w-[25%]">
+    <div className="mega-menu-content">
+      <div className="block lg:flex justify-between">
+        <ul className="title-column lg:min-w-[300px]">
+          {categories.map((category, index) => (
+            category.title && ( 
+              <li key={index} className="bg-[#f5f5f5] mb-2 rounded-[4px] lg:rounded-none p-[10px] text-sm text-[#686868] lg:leading-[27.2px] flex justify-between items-center ">
+                {category.title}
+              <MegaIcon/>
+              </li>
+            )
+          ))}
+        </ul>
+
+        <div className="lg:flex w-full ">
+          {categories.map((category, index) => (
+            category.items && ( 
+              <div key={index} className="items-column px-[15px] lg:w-[25%]">
                 <ul>
                   {category.items.map((item, idx) => (
                     <li key={idx}>
-                        <a href="" className='nav-menu-list'>{item}</a>
+                      <a href="#" className="nav-menu-list">
+                        {item}
+                      </a>
                     </li>
                   ))}
                 </ul>
               </div>
-            ))}
-     </div>
-           </div>
+            )
+          ))}
         </div>
+      </div>
+    </div>
   );
 };
 

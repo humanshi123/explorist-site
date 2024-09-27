@@ -6,7 +6,13 @@ import DataDisplayComponent from './DataDisplayComponent';
 // Define a type for your query state
 type QueryState = {
   category: string;
-  timeOfDay: string[];
+    artCulture: string[];
+    foodDrink: string[];
+    likelyToSellOut: string[];
+    outdoorActivities: string[];
+    ToursSightseeingAndCruises: string[];
+    timeOfDay: string[];
+    duration: string[];
 };
 
 // Define a type for the tour data
@@ -22,7 +28,16 @@ type TourData = {
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 const MainComponent = () => {
-  const [query, setQuery] = useState<QueryState>({ category: '', timeOfDay: [] });
+  const [query, setQuery] = useState<QueryState>({ 
+    category: '', 
+    artCulture: [],
+    foodDrink: [],
+    likelyToSellOut: [],
+    outdoorActivities: [],
+    ToursSightseeingAndCruises: [],
+    timeOfDay: [],
+    duration: [],
+  });
 
   // Use SWR for fetching data
   const { data: mainData, error } = useSWR<TourData[]>('/api/tours', fetcher);
@@ -39,7 +54,7 @@ const MainComponent = () => {
   const filteredData = mainData?.filter(item => {
     return (
       (!query.category || item.title.includes(query.category)) &&
-      (query.timeOfDay.length === 0 || query.timeOfDay.includes('Morning')) // Add actual conditions based on your filters
+      (query.timeOfDay.length === 0 || query.timeOfDay.includes('Morning') || query.timeOfDay.includes('Afternoon') || query.timeOfDay.includes('Evening and night')) // Add actual conditions based on your filters
     );
   });
 

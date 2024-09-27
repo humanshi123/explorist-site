@@ -6,17 +6,17 @@ export const categoryData = [
   {
     id: 1,
     mainCategory: "Top Attractions",
-    category: "Niagara Falls",
+    subCategory: "Niagara Falls",
     image: TourImg1,
     heading: "Niagara Falls, Ontario",
     description:
       "The chart shows volume histograms for the specified sessions, sub-sessions, or time intervals set in the settings.",
     tours: 15,
   },
-  { 
+  {  
     id: 2,
     mainCategory: "Top Attractions",
-    category: "Moraine Lake",
+    subCategory: "Niagara Falls",
     image: TourImg2,
     heading: "Moraine Lake",
     description:
@@ -26,7 +26,7 @@ export const categoryData = [
   {
     id: 3,
     mainCategory: "Top Attractions",
-    category: "Cave of the Winds",
+    subCategory: "Moraine Lake",
     image: TourImg3,
     heading: "Cave of the Winds",
     description:
@@ -36,7 +36,7 @@ export const categoryData = [
   {
     id: 4,
     mainCategory: "Top Attractions",
-    category: "Business",
+    subCategory: "Moraine Lake",
     image: TourImg1,
     heading: "Introducing Trade nation, a new broker on Epochfin",
     description:
@@ -46,7 +46,7 @@ export const categoryData = [
   {
     id: 5,
     mainCategory: "Top Attractions",
-    category: "Screeners",
+    subCategory: "Screeners",
     image: TourImg2,
     heading: "Welcoming ThinkMarkets: new brokerage on TradingView",
     description:
@@ -56,7 +56,7 @@ export const categoryData = [
   {
     id: 6,
     mainCategory: "Canada",
-    category: "Brokerage",
+    subCategory: "Brokerage",
     image: TourImg3,
     heading: "Introducing moomoo: new broker on TradingView",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -65,7 +65,7 @@ export const categoryData = [
   {
     id: 7,
     mainCategory: "Canada",
-    category: "Screeners",
+    subCategory: "Screeners",
     image: TourImg1,
     heading: "Introducing moomoo: new broker on TradingView",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -74,7 +74,7 @@ export const categoryData = [
   {
     id: 8,
     mainCategory: "Canada",
-    category: "Mobile",
+    subCategory: "Mobile",
     image: TourImg2,
     heading: "Display visuals on the chart from your pane scripts",
     description: "To bring markets closer to your desktops, we’ve expanded our trading  offerings and added one more valuable partner to the brokers’ list.",
@@ -83,7 +83,7 @@ export const categoryData = [
   {
     id: 9,
     mainCategory: "Canada",
-    category: "Trade and brokerage",
+    subCategory: "Trade and brokerage",
     image: TourImg3,
     heading: "The Leap is back with 250 cash prizes to win",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
@@ -92,7 +92,7 @@ export const categoryData = [
   {
     id: 10,
     mainCategory: "Canada",
-    category: "Editors’ picks",
+    subCategory: "Editors’ picks",
     image: TourImg1,
     heading: "A new type of chart — Session volume profile",
     description:
@@ -102,7 +102,7 @@ export const categoryData = [
   { 
     id:11,
     mainCategory: "Popular Tours",
-    category: "Stocks",
+    subCategory: "Stocks",
     image: TourImg2,
     heading: "Empowering the financial education with UFABC",
     description:
@@ -113,7 +113,7 @@ export const categoryData = [
   {
     id: 12,
     mainCategory: "Popular Tours",
-    category: "Crypto",
+    subCategory: "Crypto",
     image: TourImg3,
     heading: "Synchronized bar replay",
     description:
@@ -123,7 +123,7 @@ export const categoryData = [
   {
     id: 13,
     mainCategory: "Popular Tours",
-    category: "Forex",
+    subCategory: "Forex",
     image: TourImg1,
     heading: "Introducing Trade nation, a new broker on Epochfin",
     description:

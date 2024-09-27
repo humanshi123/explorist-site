@@ -150,7 +150,7 @@ export default function Home() {
               </p>
               <h1 className="mt-3 md:mt-[22px] mb-5 mx-auto lg:mx-0 max-w-[493px] text-[#1e1e1e] text-[36px] md:text-[48px] lg:text-[68px] leading-[48px] md:leading-[60px] lg:leading-[90.80px]">
                 Experiences Last a
-                <span className="text-[#1c9d41] font-Dmserif leading-normal">
+                <span className="text-[#1c9d41] font-Dmserif ">
                   {" "}
                   Lifetime
                 </span>

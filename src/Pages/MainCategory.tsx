@@ -8,7 +8,7 @@ const MainCategory = () => {
   const navigate = useNavigate();
 
   // Fetch products based on the categoryId
-  const products = [
+  const products = [ 
     { id: 1, name: 'Product 1', image: product },
     { id: 2, name: 'Product 2', image: product },
   ];

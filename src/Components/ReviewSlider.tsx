@@ -32,7 +32,7 @@ const ReviewSlider: React.FC<DemoSliderProps> = ({ data }) => {
     <div className="lg:pl-[11%] pl-[15px] pr-[15px] md:pr-0">
       <Swiper
         navigation={false}
-        pagination={{
+        pagination={{ 
           type: "bullets",
           clickable: true,
           bulletActiveClass: "bg-[#0F6528] opacity-100",
