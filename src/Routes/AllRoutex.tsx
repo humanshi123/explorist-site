@@ -22,6 +22,7 @@ import JoinMarketplace from "../Pages/JoinMarketplace";
 import SupplierPolicy from "../Pages/SupplierPolicy";
 import SupplierAcceptablePolicy from "../Pages/SupplierAcceptablePolicy";
 import Cart from "../Pages/Cart";
+import Wishlists from "../Pages/Wishlists";
 
 export default function AllRoutes() {
   return (
@@ -36,7 +37,11 @@ export default function AllRoutes() {
           <Route path="/ecology-check" element={ <EcologyCheck />  } />
           <Route path="/find-booking" element={ <FindBooking /> } />
           <Route path="/category/:categoryId" element={<MainCategory /> } />
-          <Route path="/product/:productId" element={<Product/> } />
+          <Route path="/product/:productId" element={<Product product={{
+            id: 0,
+            name: "",
+            image: ""
+          }}/> } />
           <Route path="/view-blogs/:blogId" element={<BlogPage/> } />
           <Route path="/about" element={<About /> } />
           <Route path="/blogs" element={<Blogs /> } />
@@ -50,6 +55,7 @@ export default function AllRoutes() {
           <Route path="/supplier-policy" element={<SupplierPolicy /> } />
           <Route path="/supplier-acceptable-policy" element={<SupplierAcceptablePolicy /> } />
           <Route path="/cart" element= {<Cart /> } />
+          <Route path="/wishlists" element={<Wishlists/> } />
 
           </Route>
         </Routes>
