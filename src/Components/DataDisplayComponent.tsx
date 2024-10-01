@@ -2,7 +2,7 @@ type DataDisplayProps = {
   data: {
     id: number;
     title: string;
-    description: string;
+    description: string; 
     price: string;
     duration: string;
   }[];
