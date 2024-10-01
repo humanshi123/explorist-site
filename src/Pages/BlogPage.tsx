@@ -1,5 +1,5 @@
 import blog from "../assets/Ontario.jpg";
-import { useLocation  } from 'react-router-dom';
+import { useLocation  } from 'react-router-dom'; 
 
 const BlogPage = () => {
     // const { id } = useParams();

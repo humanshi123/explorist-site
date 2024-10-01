@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import img1 from "../assets/Moraine.jpg";
 import img2 from "../assets/Ontario.jpg";
 
-
+ 
 const blogData =[
     {
     id: 1,

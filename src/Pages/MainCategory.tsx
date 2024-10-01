@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import product from "../assets/Ontario.jpg";
 import review from "../assets/review.svg";
 import { ProductClock, ProductTick } from '../Utils/SvgIcons';
+import ToursFilter from '../Components/ToursFilter';
 
 const MainCategory = () => {
   const { categoryId, heading } = useParams<{ categoryId: string, heading: string }>();
@@ -10,20 +11,52 @@ const MainCategory = () => {
 
   // Fetch products based on the categoryId
   const products = [ 
-    { id: 1, name: 'Product 1', image: product },
+    { id: 1, name: 'Rocky Mountains', image: product },
     { id: 2, name: 'Product 2', image: product },
+    { id: 3, name: 'Niagara Falls', image: product},
+    { id: 4, name: 'Tanzania wildlife', image: product },
+    { id: 5, name: 'Romantic Victoria', image: product},
+    { id: 6, name: 'Classic Everest', image: product},
   ];
 
-  const handleProductClick = (productId: number) => {
-    navigate(`/product/${productId}`);
+  // const handleProductClick = (productData: { id: number; name: string; image?: string }    ) => {
+  //   navigate(`/product/${productData.id}`, { state: productData }); // Navigate using categoryId
+  // };
+  
+  const handleProductClick = (productData: { id: number; name: string; image: string }) => {
+    // Get the existing recently viewed products from localStorage
+    const recentlyViewed = localStorage.getItem('recentlyViewed');
+    
+    const viewedProducts: { id: number; name: string; image: string }[] = recentlyViewed ? JSON.parse(recentlyViewed) : [4];
+  
+    // Add the current product to the viewed list if it's not already there
+    const isProductViewed = viewedProducts.find(product => product.id === productData.id);
+    if (!isProductViewed) {
+      viewedProducts.push(productData);
+      
+      // Keep only the last 5 recently viewed products
+      if (viewedProducts.length > 4) {
+        viewedProducts.shift(); // Remove the first item to keep the array length at 5
+      }
+  
+      // Save the updated list back to localStorage
+      localStorage.setItem('recentlyViewed', JSON.stringify(viewedProducts));
+    }
+  
+    navigate(`/product/${productData.id}`);
   };
-
-  return (
-    <div className='container'>
-      <h2>Top <span>Niagara Falls, Ontario</span>Tours {heading}{categoryId}</h2>
+  return ( 
+ <div className='py-[80px] '>
+     <div className='container'>
+    <div className='grid grid-cols-[298px,1fr] gap-5 '>
+      <div>
+<ToursFilter/>
+      </div>
+   <div>
+   <h2 className='mb-[30px] text-4xl '>{heading} Top <span>Niagara Falls, Ontario</span>Tours {heading}{categoryId}</h2>
       <div className="grid grid-cols-3 gap-x-5 gap-y-[30px] ">
         {products.map((product) => (
-          <div key={product.id} className="product-card" onClick={() => handleProductClick(product.id)}>
+          <div key={product.id} className="product-card" onClick={() => handleProductClick(product)}>
             <img src={product.image} alt={product.name} className='rounded-[10px]  '/>
             <h4 className='text-[#1e1e1e] mt-[15px] mb-[10px] '>{product.name}</h4>
             <div className="price flex justify-between items-center ">
@@ -38,7 +71,10 @@ const MainCategory = () => {
           </div>
         ))}
       </div>
+   </div>
     </div>
+    </div>
+ </div>
   );
 };
 

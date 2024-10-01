@@ -408,6 +408,10 @@ textarea:focus-visible {
   font-size: 14px;
   color: #333;
  }
+ .black-clock .clock path {
+  fill: #000;
+}
+
 
 @media screen and (min-width: 1025px) {
   .mega-menu-content {
@@ -525,6 +529,8 @@ textarea:focus-visible {
 .content-pages-text p, .content-pages-text li, .content-pages p {
   font-size: 14px;
 }
-
+.main-product .search-place {
+  border-radius: 6px;
+}
 
 }
