@@ -54,7 +54,7 @@ const MainCategory = () => {
       <div className='container'>
         <div className='grid md:grid-cols-[298px,1fr] gap-5 '>
           {/* Sidebar - only shown on mobile when open */}
-          <div className={`side-bar md:block ${isSidebarOpen ? 'block ' : 'hidden'} md:relative fixed z-50 inset-0 md:bg-transparent bg-black bg-opacity-30`}>
+          <div className={`side-bar md:block ${isSidebarOpen ? 'block ' : 'hidden'} md:relative fixed z-50 md:h-full h-[100vh] inset-0 md:bg-transparent bg-black bg-opacity-30`}>
             <button onClick={handleClose} className='md:hidden bg-[#0f6528] text-white px-2 rounded-md absolute top-2 right-3 '>X</button>
             <ToursFilter />
           </div>

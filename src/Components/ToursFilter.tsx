@@ -125,7 +125,8 @@ const ToursFilter: React.FC = () => {
   };
 
   return (
-    <div className="filter-container ">
+  <div className="filter-wrapper ">
+      <div className="filter-container ">
        <label htmlFor="" className="border border-[#e9e9e9] bg-[#f2f7f1] rounded-[10px] w-full flex justify-between ">
        <input type="search" name="" id="" placeholder="Niagara Falls" className="bg-transparent h-[38px] px-3 text-sm w-full "/>
        <button onClick={applyFilters} className=" button !py-2 !px-5 h-[40px] min-w-[85px] ">Search</button>
@@ -291,6 +292,7 @@ const ToursFilter: React.FC = () => {
       </div>
       {/* <button onClick={resetFilters}>Reset Filters</button> */}
     </div>
+  </div>
   );
 };
 

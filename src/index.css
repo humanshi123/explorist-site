@@ -583,14 +583,16 @@ textarea:focus-visible {
   border-radius: 6px;
 }
 .filter-container {
- height: calc(100vh + 100px);
- min-height: calc(100vh + 100px);
- max-width: 300px;
- margin-left: auto;
- padding: 50px 20px 150px;
- overflow-y: scroll;
- background: #fafff9;
- overflow-x: hidden;
+ padding: 50px 20px; 
+}
+.filter-wrapper {
+  height: 100vh;
+  min-height: 100vh;
+  max-width: 300px;
+  margin-left: auto;
+  overflow-y: scroll;
+  background: #fafff9;
+  overflow-x: hidden;
 }
 .drop-svg::after {
   top: 12px;
