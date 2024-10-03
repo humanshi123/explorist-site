@@ -34,7 +34,13 @@ const Header = () => {
   const handleMegaMenuToggle = (menuKey: string) => {
     setShowMegaMenu(menuKey === showMegaMenu ? null : menuKey);
   };
-
+  useEffect(() => {
+    if (isToggleOpen) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
   return (
     <header>
       <div className="container relative">
