@@ -583,10 +583,10 @@ textarea:focus-visible {
   border-radius: 6px;
 }
 .filter-container {
- height: 100vh;
+ height: calc(100vh + 100px);
  max-width: 300px;
  margin-left: auto;
- padding: 50px 20px 20px;
+ padding: 50px 20px;
  overflow-y: scroll;
  background: #fafff9;
  overflow-x: hidden;

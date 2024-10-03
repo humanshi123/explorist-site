@@ -176,7 +176,7 @@ const ToursFilter: React.FC = () => {
         <h3 className="text-base md:text-xl mt-2 md:my-[15px] leading-[normal] py-[5px] md:py-[10px]">Time of Day</h3>
      <div className="grid">
      {["Morning", "Afternoon", "Evening", "Night"].map((item: string) => (
-          <label key={item} className="highlight py-[4px] text-[#8c8c8c] text-sm ">
+          <label key={item} className="highlight py-[4px] text-[#8c8c8c] text-sm flex items-center">
             <input
               type="checkbox"
               value={item}
@@ -193,7 +193,7 @@ const ToursFilter: React.FC = () => {
         <h3 className="text-base md:text-xl mt-2 md:my-[15px] leading-[normal] py-[5px] md:py-[10px] ">Duration</h3>
        <div className="grid">
        {["1-3 Hours", "4-7 Hours", "Full Day"].map((item: string) => (
-          <label key={item} className="highlight py-[4px] text-[#8c8c8c] text-sm ">
+          <label key={item} className="highlight py-[4px] text-[#8c8c8c] text-sm flex items-center">
             <input
               type="checkbox"
               value={item}
@@ -277,7 +277,7 @@ const ToursFilter: React.FC = () => {
         <h3 className="text-base md:text-xl mt-2 md:my-[15px] leading-[normal] py-[5px] md:py-[10px]">Specials</h3>
     <div className="grid">
     {["Discount", "Group Discount", "Family Friendly"].map((item: string) => (
-          <label key={item} className="highlight py-[4px] text-[#8c8c8c] text-sm ">
+          <label key={item} className="highlight py-[4px] text-[#8c8c8c] text-sm flex items-center ">
             <input
               type="checkbox"
               value={item}
