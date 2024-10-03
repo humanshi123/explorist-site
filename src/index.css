@@ -584,6 +584,7 @@ textarea:focus-visible {
 }
 .filter-container {
  height: calc(100vh + 100px);
+ min-height: calc(100vh + 100px);
  max-width: 300px;
  margin-left: auto;
  padding: 50px 20px 150px;
