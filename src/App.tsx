@@ -1,4 +1,3 @@
-
 import AllRoutes from './Routes/AllRoutex'
 
 function App() {
