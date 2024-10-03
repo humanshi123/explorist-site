@@ -5,7 +5,7 @@ import dataimg3 from "../assets/about3.png";
 import ContentSection from "../Components/ContentSection";
 import about4 from "../assets/about4.jpg";
 import Faq from "../Components/Faq";
-import { SliderSection } from "./Home";
+import { SliderSection } from "./Home"; 
 
 
 const aboutData = [

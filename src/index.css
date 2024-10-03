@@ -411,6 +411,55 @@ textarea:focus-visible {
  .black-clock .clock path {
   fill: #000;
 }
+.text-selection label.tags input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+}
+.text-selection label.tags {
+  position: relative;
+  display: inline-block;
+  color: #8c8c8c;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.text-selection label.tags span {
+  columns: #8c8c8c;
+}
+.text-selection label.tags input[type="checkbox"]:checked~ span {
+  color: #0f6528;
+}
+.highlight input:checked~ span {
+  color: #000;
+}
+.drop-svg::after {
+  content: "";
+  background: url(./assets/droparrow.svg) no-repeat;
+  background-position: 95%;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  position: absolute;
+  right: 5px;
+  top: 18px;
+}
+.drop-svg.active::after {
+  transform: rotate(180deg);
+}
+.react-datepicker__day:hover, .react-datepicker__time-name:hover {
+  background-color: #1c9d41 !important;
+  color: #fff;
+}
+.search-place {
+  display: flex;
+  align-items: center;
+}
+
 
 
 @media screen and (min-width: 1025px) {
@@ -499,7 +548,7 @@ textarea:focus-visible {
     line-height: normal;
   }
   .search-button {
-    padding: 12px 10px;
+    padding: 8px 10px;
     border-radius: 21px;
     font-size: 16px;
   }
@@ -532,5 +581,24 @@ textarea:focus-visible {
 .main-product .search-place {
   border-radius: 6px;
 }
+.filter-container {
+ height: 100vh;
+ max-width: 300px;
+ margin-left: auto;
+ padding: 50px 20px 20px;
+ overflow-y: auto;
+ background: #fafff9;
+ overflow-x: hidden;
+}
+.drop-svg::after {
+  top: 12px;
+}
+.react-datepicker__day, .react-datepicker__time-name {
+  width: 30px;
+  height: 28px;
+  padding: 0px;
+  font-size: 12px;
+}
+
 
 }
