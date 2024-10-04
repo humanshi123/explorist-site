@@ -23,10 +23,13 @@ import SupplierPolicy from "../Pages/SupplierPolicy";
 import SupplierAcceptablePolicy from "../Pages/SupplierAcceptablePolicy";
 import Cart from "../Pages/Cart";
 import Wishlists from "../Pages/Wishlists";
+import ScrollToTop from "../Components/ScrollToTop";
 
 export default function AllRoutes() {
   return (
     <BrowserRouter>
+    {/* <ScrollRestoration/> */}
+        <ScrollToTop />
         <Routes>
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/signup" element= {<SignUp />} />
